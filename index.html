@@ -27,7 +27,6 @@
   body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
   a{color:var(--teal)}
   .wrap{max-width:680px;margin:0 auto;padding:0 20px}
-  header{padding:40px 0 8px;text-align:center}
   .icon{width:96px;height:96px;border-radius:22px;box-shadow:0 6px 24px rgba(0,0,0,.10)}
   h1{font-size:32px;margin:16px 0 6px;letter-spacing:-.01em}
   .pitch{font-size:18px;color:var(--muted);max-width:30em;margin:0 auto 22px}
@@ -35,7 +34,6 @@
   .badges a{display:inline-block;line-height:0}
   .badges img{height:52px;width:auto}
   .free{font-size:13px;color:var(--muted);margin:14px 0 0}
-  .shot{display:block;width:min(300px,78%);margin:36px auto 0;border-radius:28px;box-shadow:0 18px 48px rgba(0,0,0,.14)}
   section{padding:40px 0 0}
   h2{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin:0 0 18px}
   .rows{display:grid;gap:18px}
@@ -56,23 +54,53 @@
   details li{margin-bottom:10px}
   footer{margin:48px 0 40px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);text-align:center}
   footer a{margin:0 6px}
-  @media (prefers-reduced-motion:no-preference){.shot{transition:transform .3s}.shot:hover{transform:translateY(-2px)}}
+  .hero{display:grid;gap:28px;align-items:center;padding:40px 0 8px;text-align:center}
+  .hero .copy{max-width:34em;margin:0 auto}
+  .device{width:min(280px,72%);margin:8px auto 0;border:9px solid #1F2A28;border-bottom:0;border-radius:40px 40px 0 0;overflow:hidden;background:#fff;box-shadow:0 18px 48px rgba(0,0,0,.14)}
+  .device img{display:block;width:100%;height:auto}
+  .cta{text-align:center;margin:28px 0 0}
+  @media (min-width:800px){
+    .wrap{max-width:960px}
+    .hero{grid-template-columns:1.1fr .9fr;text-align:left;padding-top:56px}
+    .hero .copy{margin:0}
+    .hero .pitch{margin-left:0}
+    .hero .badges{justify-content:flex-start}
+    .device{margin:0 0 0 auto;width:300px}
+    .rows{grid-template-columns:repeat(3,1fr);gap:28px}
+    .row{grid-template-columns:1fr}
+    .row .em{text-align:left;line-height:1;margin-bottom:8px}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header>
-  <img class="icon" src="img/icon-180.png" width="96" height="96" alt="WholeTemple app icon">
-  <h1>WholeTemple</h1>
-  <p class="pitch">A verse each morning and one tap for the habits that keep you whole.</p>
-  <div class="badges">
-    <a href="https://apps.apple.com/us/app/wholetemple/id6753139244" aria-label="Download on the App Store"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
-    <a href="https://play.google.com/store/apps/details?id=com.wholetemple.app" aria-label="Get it on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height:76px;margin:-12px"></a>
+<header class="hero">
+  <div class="copy">
+    <img class="icon" src="img/icon-180.png" width="96" height="96" alt="WholeTemple app icon">
+    <h1>WholeTemple</h1>
+    <p class="pitch">A verse each morning and one tap for the habits that keep you whole.</p>
+    <div class="badges">
+      <a href="https://apps.apple.com/app/apple-store/id6753139244?pt=128176627&ct=landing&mt=8" aria-label="Download on the App Store"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.wholetemple.app&referrer=utm_source%3Dwholetemple.github.io%26utm_medium%3Dlanding%26utm_campaign%3Dsite" aria-label="Get it on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height:76px;margin:-12px"></a>
+    </div>
+    <p class="free">Free. No ads, no tracking companies, no account needed.</p>
   </div>
-  <p class="free">Free. No ads, no tracking companies, no account needed.</p>
-  <img class="shot" src="img/today.png" width="331" height="720" alt="The Today screen: the day's verse, your disciplines, and a streak that forgives">
+  <div class="device"><img src="img/today-plain.png" width="640" height="743" alt="The Today screen: the day's verse chosen for the goal Peace, with Go Deeper beneath it"></div>
 </header>
+
+<section class="story">
+  <h2>Why it exists</h2>
+  <p>A while ago my life rearranged itself in a way I did not choose. I will not go into it here. What got me through was not a plan. It was a verse in the morning, a glass of water, a walk, a few quiet minutes before the day started, and the grace to miss one and begin again.</p>
+  <p>WholeTemple is that routine, made into something you can tap. The small things are not small. Start with the water.</p>
+  <p class="sig">— Dan</p>
+  <div class="cta">
+    <div class="badges">
+      <a href="https://apps.apple.com/app/apple-store/id6753139244?pt=128176627&ct=landing&mt=8" aria-label="Download on the App Store"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.wholetemple.app&referrer=utm_source%3Dwholetemple.github.io%26utm_medium%3Dlanding%26utm_campaign%3Dsite" aria-label="Get it on Google Play"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height:76px;margin:-12px"></a>
+    </div>
+  </div>
+</section>
 
 <section>
   <h2>How it works</h2>
@@ -92,12 +120,6 @@
   </div>
 </section>
 
-<section class="story">
-  <h2>Why it exists</h2>
-  <p>A while ago my life rearranged itself in a way I did not choose. I will not go into it here. What got me through was not a plan. It was a verse in the morning, a glass of water, a walk, a few quiet minutes before the day started, and the grace to miss one and begin again.</p>
-  <p>WholeTemple is that routine, made into something you can tap. The small things are not small. Start with the water.</p>
-  <p class="sig">— Dan</p>
-</section>
 
 <details>
   <summary>Testing on Android before it's public?</summary>
